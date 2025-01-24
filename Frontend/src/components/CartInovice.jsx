@@ -21,7 +21,7 @@ const CartInvoice = () => {
       const { id: order_id, amount, currency } = orderResponse.data;
 
       const options = {
-        key: "rzp_test_iAdqdkUeEVN2MW",
+        key: "rzp_test_JgLyQjkzFOiJXx",
         amount,
         currency,
         name: "Needs for you",

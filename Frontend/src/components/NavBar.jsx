@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
-import { Navbar, Container, Form, Button, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Form, Nav, NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
 import { Badge } from 'react-bootstrap';
 import { useCart } from './CartProvider';

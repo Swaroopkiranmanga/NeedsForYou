@@ -1,114 +1,35 @@
-/*import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import NavBar from "./components/NavBar.jsx";
-import Pics from "./components/Pics.jsx";
-import Carouse from "./components/Carouse.jsx";
-import Top from "./components/Top.jsx";
-import Top2 from "./components/Top2.jsx";
-import Top3 from "./components/Top3.jsx";
-import Login from "./components/Login.jsx";
-import Register from "./components/Register.jsx";
-import ProductsPage from "./components/ProductsPage.jsx";
-import ProductItem from "./components/ProductItem.jsx";
-import AdminDashboard from "./components/AdminDashboard.jsx";
-import UploadProduct from "./components/UploadProduct.jsx";
-import ProductUpload from "./components/ProductUpload.jsx";
-import UpdateProduct from "./components/UpdateProduct.jsx";
-import CustomerCreate from "./components/CustomerCreate.jsx";
-import CustomerUpdate from "./components/CustomerUpdate.jsx";
-import Customers from "./components/Customers.jsx";
-import AdminCategory from "./components/AdminCategory.jsx";
-import AddCategory from "./components/AddCategory.jsx";
-import UpdateCategory from "./components/UpdateCategory.jsx";
-import AddSubCategoryForm from "./components/AddSubCategoryForm.jsx";
-import EditSubCategoryForm from "./components/EditSubCategoryForm.jsx";
-import AdminSubCategory from "./components/AdminSubCategory.jsx";
-
-const App = () => {
-  return (
-    
-    <Router>
-     
-      <NavBar />
-
-     
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Pics >
-               
-              </Pics>
-              <Carouse />
-              <Top />
-              <Top2 />
-              <Top3 />
-            </>
-          }
-        />
-          <Route path="/products/:id" element={<ProductsPage />} />
-        <Route path="/productitem" element={<ProductItem />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-
-        
-        <Route path="/AdminDashboard" element={<AdminDashboard />} />
-
-        <Route path="/upload" element={<UploadProduct></UploadProduct>}></Route>
-        <Route path="/productupload" element={<ProductUpload></ProductUpload>}></Route>
-        <Route path="/updateproduct/:productId" element={<UpdateProduct></UpdateProduct>}></Route>
-        <Route path="/customer" element={<Customers />} />
-        
-         <Route path="/customerupdate/:id" element={<CustomerUpdate />} />
-         <Route path="/customercreate" element={<CustomerCreate />} />
-        <Route path="/admin-categories" element={<AdminCategory />} />
-        <Route path="/add-category" element={<AddCategory />} />
-          <Route path="/update-category/:id" element={<UpdateCategory />} />
-          <Route path="/add-subcategory" element={<AddSubCategoryForm/>} />
-        <Route path="/edit-subcategory/:id" element={<EditSubCategoryForm />} />
-        <Route path="/adminsubcategory" element={<AdminSubCategory />} />
-        
-      </Routes>
-
-      
-    </Router>
-    
-  );
-};
-
-export default App;*/
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import React from "react";
 import NavBar from "./components/NavBar.jsx";
-import Pics from "./components/Pics.jsx";
-import Carouse from "./components/Carouse.jsx";
-import Top from "./components/Top.jsx";
-import Top2 from "./components/Top2.jsx";
-import Top3 from "./components/Top3.jsx";
-import Login from "./components/Login.jsx";
-import Register from "./components/Register.jsx";
-import ProductsPage from "./components/ProductsPage.jsx";
-import ProductItem from "./components/ProductItem.jsx";
-import AdminDashboard from "./components/AdminDashboard.jsx";
-import UploadProduct from "./components/UploadProduct.jsx";
-import ProductUpload from "./components/ProductUpload.jsx";
-import UpdateProduct from "./components/UpdateProduct.jsx";
-import CustomerCreate from "./components/CustomerCreate.jsx";
-import CustomerUpdate from "./components/CustomerUpdate.jsx";
-import Customers from "./components/Customers.jsx";
-import AdminCategory from "./components/AdminCategory.jsx";
-import AddCategory from "./components/AddCategory.jsx";
-import UpdateCategory from "./components/UpdateCategory.jsx";
-import AddSubCategoryForm from "./components/AddSubCategoryForm.jsx";
-import EditSubCategoryForm from "./components/EditSubCategoryForm.jsx";
-import AdminSubCategory from "./components/AdminSubCategory.jsx";
 import { CartProvider } from "./components/CartProvider.jsx";
-import CartInvoice from "./components/CartInovice.jsx";
+
+// Lazy-loaded components
+const Pics = React.lazy(() => import("./components/Pics.jsx"));
+const Carouse = React.lazy(() => import("./components/Carouse.jsx"));
+const Top = React.lazy(() => import("./components/Top.jsx"));
+const Top2 = React.lazy(() => import("./components/Top2.jsx"));
+const Top3 = React.lazy(() => import("./components/Top3.jsx"));
+const Login = React.lazy(() => import("./components/Login.jsx"));
+const Register = React.lazy(() => import("./components/Register.jsx"));
+const ProductsPage = React.lazy(() => import("./components/ProductsPage.jsx"));
+const ProductItem = React.lazy(() => import("./components/ProductItem.jsx"));
+const AdminDashboard = React.lazy(() => import("./components/AdminDashboard.jsx"));
+const UploadProduct = React.lazy(() => import("./components/UploadProduct.jsx"));
+const ProductUpload = React.lazy(() => import("./components/ProductUpload.jsx"));
+const UpdateProduct = React.lazy(() => import("./components/UpdateProduct.jsx"));
+const CustomerCreate = React.lazy(() => import("./components/CustomerCreate.jsx"));
+const CustomerUpdate = React.lazy(() => import("./components/CustomerUpdate.jsx"));
+const Customers = React.lazy(() => import("./components/Customers.jsx"));
+const AdminCategory = React.lazy(() => import("./components/AdminCategory.jsx"));
+const AddCategory = React.lazy(() => import("./components/AddCategory.jsx"));
+const UpdateCategory = React.lazy(() => import("./components/UpdateCategory.jsx"));
+const AddSubCategoryForm = React.lazy(() => import("./components/AddSubCategoryForm.jsx"));
+const EditSubCategoryForm = React.lazy(() => import("./components/EditSubCategoryForm.jsx"));
+const AdminSubCategory = React.lazy(() => import("./components/AdminSubCategory.jsx"));
+const CartInvoice = React.lazy(() => import("./components/CartInovice.jsx"));
+
 
 function App() {
   return (
